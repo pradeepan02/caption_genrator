@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Captioning</title>
+    <style>
+        /* Global styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #1e1e2d; /* Dark background */
+            color: #fff;
+            padding: 20px;
+        }
+
+        /* Main container */
+        .container {
+            background-color: #2a2a3d; /* Dark form background */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid #3e3e52;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #f5f5f5;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        /* Form elements */
+        label {
+            font-size: 1.2rem;
+            color: #f5f5f5;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        input[type="file"] {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 1rem;
+            border: 2px solid #555;
+            background-color: #1c1c2a; /* Darker input background */
+            color: #ddd;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            transition: border-color 0.3s, background-color 0.3s;
+        }
+
+        input[type="file"]:hover {
+            border-color: #888;
+            background-color: #333;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 20px;
+            font-size: 1.2rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px); /* Subtle lift effect */
+        }
+
+        button:active {
+            background-color: #004494;
+            transform: translateY(0); /* Reset lift effect */
+        }
+
+        /* Media Queries */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            button {
+                font-size: 1rem;
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Image Captioning</h1>
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <label for="image">Upload an Image:</label>
+            <input type="file" name="image" id="image" required><br><br>
+            <button type="submit">Generate Caption</button>
+        </form>
+    </div>
+</body>
+</html>
